@@ -1,0 +1,134 @@
+:root {
+    --cor-fundo: #c7b2b2;
+    --cor-card: #ffffff;
+    --cor-sombra: rgba(167, 5, 67, 0.3);
+    --cor-botao: rgba(167, 5, 67, 0.962);
+    --cor-font: rgba(0,0,0,0,);
+    --fonte-principal: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    padding: 15px;
+}
+
+header {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.saudacao {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--cor-font);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    background-color: var(--cor-card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--cor-sombra);
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-container h2 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.form-container p {
+    font-size: 0.95rem;
+    text-align: center;
+    color: #555;
+    line-height: 1.4;
+}
+
+.card {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: rgb(130, 4, 52);
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #4a4a4a;
+}
+
+@media (min-width: 480px) {
+    body {
+        padding: 30px;
+    }
+
+    .form-container {
+        padding: 35px;
+        max-width: 420px;
+    }
+
+    .saudacao {
+        font-size: 2rem;
+    }
+}
